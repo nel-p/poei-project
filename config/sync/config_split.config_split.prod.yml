@@ -5,11 +5,13 @@ dependencies: {  }
 id: prod
 label: PROD
 description: ''
-folder: ''
+folder: ../config/prod
 module: {  }
 theme: {  }
 blacklist: {  }
-graylist: {  }
+graylist:
+  - system.site
+  - 'webform.*'
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
