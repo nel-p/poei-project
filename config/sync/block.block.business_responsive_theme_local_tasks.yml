@@ -9,7 +9,7 @@ _core:
 id: business_responsive_theme_local_tasks
 theme: business_responsive_theme
 region: auto_hidden_block
-weight: 0
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:
