@@ -1,0 +1,9 @@
+uuid: 601817ff-fed9-4efa-878b-333fbe50acfe
+langcode: en
+status: true
+dependencies: {  }
+id: organizer
+label: Organizer
+weight: -8
+is_admin: null
+permissions: {  }
