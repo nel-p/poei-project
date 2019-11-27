@@ -1,0 +1,22 @@
+uuid: 2b74cb49-0b30-43b3-a6bf-1c75a986c769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_et_but_du_prog
+    - node.type.programme_de_recherche
+  module:
+    - text
+id: node.programme_de_recherche.field_description_et_but_du_prog
+field_name: field_description_et_but_du_prog
+entity_type: node
+bundle: programme_de_recherche
+label: 'Description et but du programme'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

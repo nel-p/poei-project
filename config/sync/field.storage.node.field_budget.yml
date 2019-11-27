@@ -1,0 +1,18 @@
+uuid: a3a4c68a-dfcb-4c29-853d-81ab4e5320c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_budget
+field_name: field_budget
+entity_type: node
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
