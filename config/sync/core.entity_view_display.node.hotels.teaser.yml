@@ -1,0 +1,30 @@
+uuid: c27bbba8-f8c2-4937-821b-34e1d28459b7
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hotels.field_adresse
+    - field.field.node.hotels.field_description
+    - field.field.node.hotels.field_email
+    - field.field.node.hotels.field_prix
+    - field.field.node.hotels.field_t
+    - node.type.hotels
+  module:
+    - user
+id: node.hotels.teaser
+targetEntityType: node
+bundle: hotels
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_adresse: true
+  field_description: true
+  field_email: true
+  field_prix: true
+  field_t: true
