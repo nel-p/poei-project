@@ -1,0 +1,65 @@
+uuid: 793f1c4c-d0f4-4be1-9266-4f83a53189e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hotels.field_adresse
+    - field.field.node.hotels.field_description
+    - field.field.node.hotels.field_email
+    - field.field.node.hotels.field_prix
+    - field.field.node.hotels.field_t
+    - node.type.hotels
+  module:
+    - address
+    - text
+    - user
+id: node.hotels.default
+targetEntityType: node
+bundle: hotels
+mode: default
+content:
+  field_adresse:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_description:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_prix:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_t:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
