@@ -1,0 +1,68 @@
+uuid:
+  -
+    value: e3d68b1a-402d-4e63-b962-993f98b4926c
+langcode:
+  -
+    value: en
+type:
+  -
+    target_id: page
+    target_type: node_type
+    target_uuid: c275451e-f59a-4b79-ad81-86caa2a2cde2
+revision_timestamp:
+  -
+    value: '2019-11-27T10:58:41+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  -
+    target_type: user
+    target_uuid: 59504845-b450-4984-ab48-8fb8e8044726
+revision_log: {  }
+status:
+  -
+    value: true
+uid:
+  -
+    target_type: user
+    target_uuid: 59504845-b450-4984-ab48-8fb8e8044726
+title:
+  -
+    value: Info
+created:
+  -
+    value: '2019-11-27T10:52:10+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  -
+    value: '2019-11-27T11:00:26+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  -
+    value: false
+sticky:
+  -
+    value: false
+default_langcode:
+  -
+    value: true
+revision_translation_affected:
+  -
+    value: true
+path:
+  -
+    alias: null
+    pid: null
+    langcode: en
+body:
+  -
+    value: "<p>Accession process !!!</p>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non fringilla augue. Nulla facilisi. Nunc ut nibh sed dui accumsan pulvinar. Nullam mattis, lacus quis porttitor laoreet, quam dolor sagittis ligula, nec semper felis arcu quis massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id sem felis. Mauris id sapien quis mi sagittis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum faucibus massa, at venenatis neque feugiat pellentesque.</p>\r\n\r\n<p>Pellentesque dui mi, faucibus in lobortis quis, dignissim nec nisl. Morbi ac sapien lacus. Phasellus nulla lacus, venenatis sed mattis at, dignissim et sem. Nullam ornare sed enim at porttitor. Pellentesque bibendum vehicula ligula at suscipit. Curabitur sodales elit et auctor vestibulum. Donec metus ipsum, dapibus ut imperdiet eget, venenatis sit amet libero. Morbi quis facilisis enim. Integer elit ipsum, porta et blandit non, viverra vitae nisl. Ut a consectetur risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ultrices ex non est molestie, vitae tempus erat congue. Donec nunc nibh, laoreet ac lectus vitae, congue venenatis mi. Nam lacinia eget odio non luctus. In aliquet rhoncus blandit. Curabitur vestibulum ipsum at dui pretium venenatis.</p>\r\n\r\n<p>Donec in augue imperdiet, hendrerit urna ac, sodales urna. In eget eros venenatis, commodo est vitae, placerat purus. Pellentesque sit amet venenatis nunc, id aliquet ex. Maecenas faucibus, justo vel commodo maximus, leo elit accumsan dolor, in facilisis ante magna a mi. Integer vitae tincidunt sem, a vulputate purus. Integer a ullamcorper leo. Quisque vel sem ac ligula faucibus congue ac ut neque. Vivamus mi libero, ultricies eget urna ut, commodo tincidunt turpis. Curabitur quis sollicitudin neque, faucibus faucibus mi. Vivamus pharetra tincidunt nulla eu feugiat.</p>\r\n\r\n<p>Aenean lobortis massa non mauris pulvinar, vel viverra risus auctor. Cras auctor mauris tortor, eget ullamcorper nisl interdum vel. Nulla ac orci sem. Morbi hendrerit finibus arcu et mattis. Etiam tempus blandit nisi, quis mattis mauris aliquam nec. Morbi ac enim orci. Cras blandit, libero et iaculis tincidunt, lorem tellus elementum nisl, in maximus metus sem vitae eros. Fusce egestas erat sit amet mauris pretium iaculis. Morbi laoreet eros vitae purus rhoncus, accumsan consectetur eros pulvinar. Nam eget lectus nec augue pellentesque interdum eget id metus. Nunc non commodo enim.</p>\r\n"
+    format: full_html
+    processed: "<p>Accession process !!!</p>\n\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non fringilla augue. Nulla facilisi. Nunc ut nibh sed dui accumsan pulvinar. Nullam mattis, lacus quis porttitor laoreet, quam dolor sagittis ligula, nec semper felis arcu quis massa. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id sem felis. Mauris id sapien quis mi sagittis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum faucibus massa, at venenatis neque feugiat pellentesque.</p>\n\n<p>Pellentesque dui mi, faucibus in lobortis quis, dignissim nec nisl. Morbi ac sapien lacus. Phasellus nulla lacus, venenatis sed mattis at, dignissim et sem. Nullam ornare sed enim at porttitor. Pellentesque bibendum vehicula ligula at suscipit. Curabitur sodales elit et auctor vestibulum. Donec metus ipsum, dapibus ut imperdiet eget, venenatis sit amet libero. Morbi quis facilisis enim. Integer elit ipsum, porta et blandit non, viverra vitae nisl. Ut a consectetur risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ultrices ex non est molestie, vitae tempus erat congue. Donec nunc nibh, laoreet ac lectus vitae, congue venenatis mi. Nam lacinia eget odio non luctus. In aliquet rhoncus blandit. Curabitur vestibulum ipsum at dui pretium venenatis.</p>\n\n<p>Donec in augue imperdiet, hendrerit urna ac, sodales urna. In eget eros venenatis, commodo est vitae, placerat purus. Pellentesque sit amet venenatis nunc, id aliquet ex. Maecenas faucibus, justo vel commodo maximus, leo elit accumsan dolor, in facilisis ante magna a mi. Integer vitae tincidunt sem, a vulputate purus. Integer a ullamcorper leo. Quisque vel sem ac ligula faucibus congue ac ut neque. Vivamus mi libero, ultricies eget urna ut, commodo tincidunt turpis. Curabitur quis sollicitudin neque, faucibus faucibus mi. Vivamus pharetra tincidunt nulla eu feugiat.</p>\n\n<p>Aenean lobortis massa non mauris pulvinar, vel viverra risus auctor. Cras auctor mauris tortor, eget ullamcorper nisl interdum vel. Nulla ac orci sem. Morbi hendrerit finibus arcu et mattis. Etiam tempus blandit nisi, quis mattis mauris aliquam nec. Morbi ac enim orci. Cras blandit, libero et iaculis tincidunt, lorem tellus elementum nisl, in maximus metus sem vitae eros. Fusce egestas erat sit amet mauris pretium iaculis. Morbi laoreet eros vitae purus rhoncus, accumsan consectetur eros pulvinar. Nam eget lectus nec augue pellentesque interdum eget id metus. Nunc non commodo enim.</p>\n"
+    summary: ''
+    summary_processed: ''
+_content_sync:
+  entity_type: node
+  entity_dependencies:
+    user:
+      - user.user.59504845-b450-4984-ab48-8fb8e8044726
+      - user.user.59504845-b450-4984-ab48-8fb8e8044726
