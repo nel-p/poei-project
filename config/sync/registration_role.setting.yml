@@ -1,0 +1,8 @@
+role_to_select:
+  participant: participant
+  organizer: 0
+  webmaster: 0
+  administrator: 0
+registration_mode: admin
+_core:
+  default_config_hash: o1wWkhSOJotsHFgvzESaUOiTWhLak62cKBDyEtewAIM
