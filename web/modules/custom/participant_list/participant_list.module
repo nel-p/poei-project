@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains participant_list.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function participant_list_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the participant_list module.
+    case 'help.page.participant_list':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Visibilité de la liste des participants réservé aux organisateurs de la conférence.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function participant_list_theme() {
+  return [
+    'participant_list' => [
+      'render element' => 'children',
+    ],
+  ];
+}
