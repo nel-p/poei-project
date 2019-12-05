@@ -1,0 +1,7 @@
+participant_list.access_list:
+  path: '/node/{node}/presentation'
+  defaults:
+    _title: 'Détails de la conference'
+    _controller: 'Drupal\participant_list\Controller\Participant_listController::content'
+  requirements:
+    _access: 'TRUE'

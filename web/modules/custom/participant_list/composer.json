@@ -1,0 +1,13 @@
+{
+    "name": "participant_list",
+    "type": "drupal-module",
+    "description": "Visibilité de la liste des participants réservé aux organisateurs de la conférence.",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/participant_list",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/participant_list",
+        "source": "http://cgit.drupalcode.org/participant_list",
+    },
+}

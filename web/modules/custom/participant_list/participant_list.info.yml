@@ -1,0 +1,5 @@
+name: 'Participant_list'
+type: module
+description: 'Visibilité de la liste des participants réservé aux organisateurs de la conférence.'
+core: 8.x
+package: 'Participant list'

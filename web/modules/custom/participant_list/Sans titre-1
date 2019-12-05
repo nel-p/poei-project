@@ -1,0 +1,11 @@
+participant_list.access_list:
+    title: 'Details du programme'
+    route_name: participant_list.access_list
+    base_route: entity.node.canonical
+    weight: 1
+    
+participant_list.access_list:
+    title: 'Participants'
+    route_name: participant_list.access_list
+    base_route: entity.node.canonical
+    weight: 2
