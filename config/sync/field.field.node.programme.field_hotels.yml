@@ -1,0 +1,29 @@
+uuid: 73484fd8-1455-4b7b-bad1-4fda10ee1145
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hotels
+    - node.type.hotel
+    - node.type.programme
+id: node.programme.field_hotels
+field_name: field_hotels
+entity_type: node
+bundle: programme
+label: Hôtels
+description: "\r\n"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      hotel: hotel
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

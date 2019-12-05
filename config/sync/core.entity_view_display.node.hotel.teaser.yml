@@ -1,0 +1,20 @@
+uuid: cbc33757-8fe5-4739-b715-d7b7447689d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.hotel
+  module:
+    - user
+id: node.hotel.teaser
+targetEntityType: node
+bundle: hotel
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

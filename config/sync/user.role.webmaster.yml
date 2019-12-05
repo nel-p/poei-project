@@ -6,4 +6,6 @@ id: webmaster
 label: Webmaster
 weight: -6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create programme content'
+  - 'delete any programme content'
