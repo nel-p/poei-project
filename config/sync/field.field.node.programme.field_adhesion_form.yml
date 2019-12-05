@@ -1,0 +1,32 @@
+uuid: 99f8d753-d660-4b06-a80c-b4a29672d50c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adhesion_form
+    - node.type.programme
+    - webform.webform.adhesion_programme
+  module:
+    - webform
+id: node.programme.field_adhesion_form
+field_name: field_adhesion_form
+entity_type: node
+bundle: programme
+label: 'Formulaire d''adhésion'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: 39c2b333-97ac-4f18-8ed7-e00316aa257c
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

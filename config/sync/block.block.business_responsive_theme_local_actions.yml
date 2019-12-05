@@ -9,7 +9,7 @@ _core:
 id: business_responsive_theme_local_actions
 theme: business_responsive_theme
 region: auto_hidden_block
-weight: -3
+weight: -4
 provider: null
 plugin: local_actions_block
 settings:

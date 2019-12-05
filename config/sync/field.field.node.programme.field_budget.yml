@@ -1,0 +1,23 @@
+uuid: 56ab0e61-cc64-42d4-836b-e844c205f58d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_budget
+    - node.type.programme
+id: node.programme.field_budget
+field_name: field_budget
+entity_type: node
+bundle: programme
+label: Budget
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float
