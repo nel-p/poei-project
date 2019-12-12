@@ -1,11 +1,11 @@
-participant_list.details:
-  title: 'Details du programme'
-  route_name: participant_list.access_list
+participant_list.access_organisateur:
+  title: 'Les organisateur'
+  route_name: participant_list.access_organisateur
   base_route: entity.node.canonical
   weight: 1
     
-participant_list.access_list2:
-  title: 'Participants'
+participant_list.access_list:
+  title: 'Les participants'
   route_name: participant_list.access_list
   base_route: entity.node.canonical
   weight: 2

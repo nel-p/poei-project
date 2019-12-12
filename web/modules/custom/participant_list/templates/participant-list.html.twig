@@ -1,1 +1,14 @@
 <!-- Add you custom twig html here -->
+<span>
+  {% for user in children.liste %}
+    {% if children['#role'] == "participants" %}
+      <p><b><a href="../../../web/user/{{ user.uid }}">{{ user.name }}</a></b> participe à la conférence.</p>
+    {% elseif children['#role'] == "organisateurs" %}
+      <p><b><a href="../../../web/user/{{ user.uid }}">{{ user.name }}</a></b> organise à la conférence.</p>
+    {% endif %}
+    {% if loop.last %}
+      <p>Il y à {{ loop.length }} {{children['#role']}} pour cette conférence.</p>
+    {% endif %}
+  {% endfor %}
+
+</span>
