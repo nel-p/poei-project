@@ -15,7 +15,7 @@ rss_url: rss.xml
 copyright_text: 'Copyright 2019. All rights reserved'
 show_social_icon: 0
 show_credit_link: 0
-show_slideshow: 1
+show_slideshow: 0
 no_of_slides: '3'
 slide_title_1: 'Drupal 8 zymphonies theme'
 slide_description_1: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since.'
@@ -39,3 +39,7 @@ favicon:
 slide_image_path1: {  }
 slide_image_path2: {  }
 slide_image_path3: {  }
+slide_image_path4: {  }
+slide_title_4: ''
+slide_description_4: ''
+slide_url_4: ''

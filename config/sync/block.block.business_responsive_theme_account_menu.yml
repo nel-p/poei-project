@@ -12,8 +12,8 @@ _core:
   default_config_hash: WBBpOfroLTC3vMi_qGBQ-2UvGKpJDfivf42BOI2Ve94
 id: business_responsive_theme_account_menu
 theme: business_responsive_theme
-region: sidebar_first
-weight: -6
+region: auto_hidden_block
+weight: -5
 provider: null
 plugin: 'system_menu_block:account'
 settings:
