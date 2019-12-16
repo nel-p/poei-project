@@ -7,4 +7,13 @@ label: Organizer
 weight: -7
 is_admin: null
 permissions:
+  - 'access user profiles'
+  - 'access webform overview'
+  - 'change own username'
+  - 'create hotel content'
   - 'create programme content'
+  - 'create webform'
+  - 'delete own webform'
+  - 'edit own webform'
+  - 'view own unpublished content'
+  - 'view the administration theme'

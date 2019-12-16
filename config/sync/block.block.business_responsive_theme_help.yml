@@ -11,7 +11,7 @@ _core:
 id: business_responsive_theme_help
 theme: business_responsive_theme
 region: highlighted
-weight: -30
+weight: -5
 provider: null
 plugin: help_block
 settings:
