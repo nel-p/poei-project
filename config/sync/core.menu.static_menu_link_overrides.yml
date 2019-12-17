@@ -18,22 +18,34 @@ definitions:
     expanded: false
     enabled: true
   node__add_page:
-    weight: -49
-    enabled: false
+    weight: -50
     menu_name: tools
     parent: ''
     expanded: false
+    enabled: false
   filter__tips_all:
-    weight: -48
+    weight: -49
     menu_name: tools
     parent: ''
     expanded: false
     enabled: false
   search__view:
-    weight: -47
+    weight: -48
     menu_name: tools
     parent: ''
     expanded: false
     enabled: false
+  participant_list__add_hotel:
+    weight: -46
+    menu_name: tools
+    parent: ''
+    enabled: true
+    expanded: false
+  participant_list__add_programme:
+    weight: -47
+    menu_name: tools
+    parent: ''
+    expanded: false
+    enabled: true
 _core:
   default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
