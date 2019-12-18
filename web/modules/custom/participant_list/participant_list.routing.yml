@@ -1,0 +1,24 @@
+participant_list.access_list:
+  path: '/node/{node}/participant'
+  defaults:
+    _title: 'Les participants'
+    _controller: 'Drupal\participant_list\Controller\Participant_listController::content'
+  requirements:
+    _access: 'TRUE'
+  
+participant_list.access_organisateur:
+  path: '/node/{node}/organisateur'
+  defaults:
+    _title: 'Les organisateurs'
+    _controller: 'Drupal\participant_list\Controller\Participant_list_OrganisateurController::content'
+  requirements:
+    _access: 'TRUE'
+
+# -- route vers listing event adhéré par un participant
+participant_list.userEventList:
+  path: '/user/{user}/my-events'
+  defaults:
+    _title: 'Mes ahdésion'
+    _controller: 'Drupal\participant_list\Controller\Participant_list_UserEventListController::content'
+  requirements:
+    _access: 'TRUE'

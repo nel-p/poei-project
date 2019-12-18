@@ -1,0 +1,106 @@
+<?php
+
+/**
+ * @file
+ * Contains participant_list.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\webform\WebformSubmissionInterface;
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements hook_help().
+ */
+function participant_list_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the participant_list module.
+    case 'help.page.participant_list':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Visibilité de la liste des participants réservé aux organisateurs de la conférence.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function participant_list_theme() {
+  return [
+    'participant_list' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+// -- hook ajout et retrait des participant à un programme selon status adésion
+function participant_list_webform_submission_update(WebformSubmissionInterface $entity) {
+  // --
+  $userId = $entity->getOwnerId();
+  $members = $entity->getSourceEntity()->field_participants->getValue();
+  
+  //-- adhésion acceptée et utilisateur pas déja dans la liste
+  if ($entity->getData()['adhesion_status'] == 'accepted' && !in_array(['target_id' => $userId], $members)) {
+    $entity->getSourceEntity()->field_participants->setValue(array_merge($members, ['target_id' => $userId]));
+    $entity->getSourceEntity()->save();
+  }
+
+  //-- adhésion refusée et utilisateur déja dans la liste
+  if ($entity->getData()['adhesion_status'] != 'accepted' && in_array(['target_id' => $userId], $members)) {
+    $key = array_search(['target_id' => $userId], $members);
+    unset($members[$key]);
+
+    $entity->getSourceEntity()->field_participants->setValue($members);
+    $entity->getSourceEntity()->save();
+  }
+}
+
+// -- hook gestion acces webform et webform soumission 
+function participant_list_webform_submission_access($submission, $operation, $account = NULL) {
+  // -- droit d'accès webform soumissions
+  $organizers = $submission->getSourceEntity()->get('field_organisateurs')->getValue();
+
+  switch ($operation) {
+    case 'view':
+      return AccessResult::allowedIf(in_array(['target_id' => $account->id()], $organizers));
+      break;
+
+    case 'update':
+      return AccessResult::allowedIf(in_array(['target_id' => $account->id()], $organizers));
+      break;
+
+    default:
+      return AccessResult::neutral();
+  }
+}
+
+function participant_list_webform_access($webform, $operation, $account = NULL) {
+  // -- droit de gestion des accès webform d'adhésion
+  switch ($operation) {
+    case 'update':
+      if ($webform->id() == 'adhesion_programme') {
+        return AccessResult::forbiddenIf(!in_array('administrator', $account->getRoles()));
+      }
+
+      return AccessResult::allowedIf($webform->getOwnerId() == $account->id());
+      break;
+
+    case 'delete':
+      if ($webform->id() == 'adhesion_programme') {
+        return AccessResult::forbiddenIf(!in_array('administrator', $account->getRoles()));
+      }
+
+      return AccessResult::allowedIf($webform->getOwnerId() == $account->id());
+      break;
+
+    case 'duplicate':
+      return AccessResult::allowed();
+      break;
+
+    default:
+      return AccessResult::neutral();
+  }
+}

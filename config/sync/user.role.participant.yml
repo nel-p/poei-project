@@ -1,0 +1,10 @@
+uuid: ff282f4c-1928-4a09-8709-16171a9b32e2
+langcode: en
+status: true
+dependencies: {  }
+id: participant
+label: Participant
+weight: -8
+is_admin: null
+permissions:
+  - 'change own username'

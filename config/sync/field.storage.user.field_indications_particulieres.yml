@@ -1,0 +1,19 @@
+uuid: 3ad33165-c227-4035-bd04-5508ebed3693
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_indications_particulieres
+field_name: field_indications_particulieres
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

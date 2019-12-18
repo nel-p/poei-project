@@ -1,0 +1,36 @@
+# -- Liens menu principal
+participant_list.my_account:
+  weight: 5
+  title: 'My account'
+  route_name: user.page
+  menu_name: main
+
+# participant_list.login:
+#   weight: 6
+#   title: 'Log in'
+#   route_name: user.login
+#   menu_name: main
+
+# participant_list.logout:
+#   weight: 6
+#   title: 'Log out'
+#   route_name: user.logout
+#   menu_name: main
+
+participant_list.logout:
+  weight: 6
+  menu_name: main
+  class: Drupal\user\Plugin\Menu\LoginLogoutMenuLink
+
+# -- Liens block tools -- ajout de contenue
+participant_list.add_programme:
+  title: 'Create programme'
+  route_name: node.add
+  menu_name: tools
+  route_parameters: { node_type: 'programme' }
+
+participant_list.add_hotel:
+  title: 'Create hotel'
+  route_name: node.add
+  menu_name: tools
+  route_parameters: { node_type: 'hotel' }

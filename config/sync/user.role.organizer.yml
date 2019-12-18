@@ -1,0 +1,19 @@
+uuid: 601817ff-fed9-4efa-878b-333fbe50acfe
+langcode: en
+status: true
+dependencies: {  }
+id: organizer
+label: Organizer
+weight: -7
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'access webform overview'
+  - 'change own username'
+  - 'create hotel content'
+  - 'create programme content'
+  - 'create webform'
+  - 'delete own webform'
+  - 'edit own webform'
+  - 'view own unpublished content'
+  - 'view the administration theme'

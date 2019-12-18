@@ -1,0 +1,21 @@
+uuid: f1bf4024-344c-424c-8bfb-e069d5e3e2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telephone
+    - node.type.hotel
+  module:
+    - text
+id: node.hotel.field_telephone
+field_name: field_telephone
+entity_type: node
+bundle: hotel
+label: Téléphone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

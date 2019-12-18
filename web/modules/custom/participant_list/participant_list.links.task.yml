@@ -1,0 +1,18 @@
+participant_list.access_organisateur:
+  title: 'Les organisateurs'
+  route_name: participant_list.access_organisateur
+  base_route: entity.node.canonical
+  weight: 1
+    
+participant_list.access_list:
+  title: 'Les participants'
+  route_name: participant_list.access_list
+  base_route: entity.node.canonical
+  weight: 2
+
+# -- onglet listing event adhéré par un participant
+participant_list.task_userEventList:
+  title: 'Mes adhésions'
+  route_name: participant_list.userEventList
+  base_route: entity.user.canonical
+  weight: 100
