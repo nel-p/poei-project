@@ -134,7 +134,10 @@ access:
     users: {  }
     permissions: {  }
   view_any:
-    roles: {  }
+    roles:
+      - organizer
+      - webmaster
+      - administrator
     users: {  }
     permissions: {  }
   update_any:
@@ -163,8 +166,6 @@ access:
     permissions: {  }
   administer:
     roles:
-      - organizer
-      - webmaster
       - administrator
     users: {  }
     permissions: {  }
