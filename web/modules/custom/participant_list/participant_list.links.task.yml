@@ -9,3 +9,10 @@ participant_list.access_list:
   route_name: participant_list.access_list
   base_route: entity.node.canonical
   weight: 2
+
+# -- onglet listing event adhéré par un participant
+participant_list.task_userEventList:
+  title: 'Mes adhésions'
+  route_name: participant_list.userEventList
+  base_route: entity.user.canonical
+  weight: 100

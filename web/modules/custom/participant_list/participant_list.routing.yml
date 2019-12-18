@@ -13,3 +13,12 @@ participant_list.access_organisateur:
     _controller: 'Drupal\participant_list\Controller\Participant_list_OrganisateurController::content'
   requirements:
     _access: 'TRUE'
+
+# -- route vers listing event adhéré par un participant
+participant_list.userEventList:
+  path: '/user/{user}/my-events'
+  defaults:
+    _title: 'Mes ahdésion'
+    _controller: 'Drupal\participant_list\Controller\Participant_list_UserEventListController::content'
+  requirements:
+    _access: 'TRUE'
