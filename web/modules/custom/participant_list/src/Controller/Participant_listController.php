@@ -26,13 +26,14 @@ class Participant_listController extends ControllerBase{
         $link = new Link('Editer', $url);
         $candidat[] = [
           $submission->getData()['adresse']['given_name'],
+          $submission->getData()['adhesion_status'],
           $link,
           ];
       }
       return [
         '#type' => 'table',
         '#empty' => $this->t('No participants'),
-        '#header' => [$this->t('Participants in the program'),''],
+        '#header' => [$this->t('Participants in the program'),'Statut',' '],
         '#rows' => $candidat,
         '#cache' => [
           'max-age' => 0,
