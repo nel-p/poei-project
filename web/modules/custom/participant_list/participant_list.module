@@ -69,7 +69,7 @@ function participant_list_webform_submission_access($submission, $operation, $ac
       break;
 
     case 'update':
-      return AccessResult::allowedIf(in_array(['target_id' => $account->id()], $organizers));
+      return AccessResult::allowedIf(in_array(['target_id' => $account->id()], $organizers) || $submission->getOwnerId() == $account->id());
       break;
 
     default:

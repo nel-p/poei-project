@@ -1,0 +1,38 @@
+uuid: fd35a421-8ceb-4ba5-8207-3f0e80c341eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_photos
+    - node.type.programme
+  module:
+    - image
+id: node.programme.field_photos
+field_name: field_photos
+entity_type: node
+bundle: programme
+label: Photos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: photos/programme
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

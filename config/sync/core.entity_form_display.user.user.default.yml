@@ -7,8 +7,10 @@ dependencies:
     - field.field.user.user.field_indications_particulieres
     - field.field.user.user.field_site_web
     - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
     - address
+    - image
     - link
     - user
 _core:
@@ -24,13 +26,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_adresse:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_indications_particulieres:
-    weight: 3
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -38,15 +40,22 @@ content:
     type: string_textarea
     region: content
   field_site_web:
-    weight: 2
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
     region: content
+  user_picture:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
 hidden:
   contact: true
   language: true
   timezone: true
-  user_picture: true

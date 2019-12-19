@@ -11,9 +11,12 @@ dependencies:
     - field.field.node.programme.field_hotels
     - field.field.node.programme.field_organisateurs
     - field.field.node.programme.field_participants
+    - field.field.node.programme.field_photos
+    - image.style.thumbnail
     - node.type.programme
   module:
     - datetime
+    - image
     - path
     - text
     - webform
@@ -57,14 +60,13 @@ content:
   field_detail:
     weight: 7
     settings:
-      rows: 9
-      summary_rows: 3
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea_with_summary
+    type: text_textarea
     region: content
   field_hotels:
-    weight: 12
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -73,7 +75,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_organisateurs:
-    weight: 11
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -81,14 +83,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_participants:
-    weight: 13
+  field_photos:
+    weight: 11
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: image_image
     region: content
   path:
     type: path
@@ -134,4 +135,5 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_participants: true
