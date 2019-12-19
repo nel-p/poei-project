@@ -38,5 +38,6 @@ permissions:
   - 'edit own webform'
   - 'edit own webform submission'
   - 'view any webform submission'
+  - 'view own unpublished content'
   - 'view own webform submission'
   - 'view the administration theme'

@@ -5,56 +5,39 @@ use Drupal\Core\Entity;
 use Drupal\Node\NodeInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Field\EntityReferenceFieldItemList;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 class Participant_listController extends ControllerBase{
     public function content(NodeInterface $node){
-      // Recupere la liste des id des organisateurs.
-      $organisateurs = $node->field_organisateurs->getValue();
-      // Recupere l'utilisateur courrant.
-      $userId = \Drupal::currentUser();
-      // Vérifie si l'utilisateur courant est "administrateur" ou un des organisateurs de la conférence.
-      if(in_array($userId->id(), $organisateurs) || in_array('administrator', $userId->getRoles())){
-        if($node->bundle() === "programme"){
-          $programme = \Drupal::service('entity_field.manager')->getFieldDefinitions('node', 'programme');
-          $nodes_list = $this->entityTypeManager()->getStorage('node_type')->loadMultiple();
-          // Je récupere l'id des participants au a cette conférence
-          $id_participant = $node->field_participants->getValue();
-          $i = 0;
-          $name_participant = [];
-          while($i < count($id_participant)){
-            // Recuperation du champ "name" des participants 
-            $query = \Drupal::database()->select('users_field_data','ufa')->fields('ufa', ['name'])->condition('uid', $id_participant[$i]['target_id']);
-            $resultat = $query->execute();
-            //Parcour du tableau de resultat afin de récuperer le champ name
-            foreach ($resultat as $res) {
-              // affectation du champ name et uid au tableau de participant
-              $name_participant[] = ['name' => $res->name,'uid' => $id_participant[$i]['target_id']];
-            }
-            $i++;
-          }        
-          return [
-            '#table' => [
-              '#type' => 'table',
-              '#empty' => $this->t('No participants'),
-              '#header' => $this->t('Participants in the program'),
-              '#rows' => $name_participant,
-            ],
-            'template' => [
-              '#theme' => 'participant_list',
-              'liste' => $name_participant,
-              '#role' => 'participants',
-            ],
-            '#cache' => [
-              'max-age' => 0,
-            ]
+      $storage = $this->entityTypeManager()->getStorage('webform_submission');
+      $webform_submission = $storage->loadByProperties([
+        'entity_id' => $node->id(),
+      ]);
+      $candidat = [];
+      foreach($webform_submission as $submission)
+      {
+        //recupere l'id du webform et l'id de la soumission
+        $ids = [
+          'webform' => $submission->getWebform()->id(),
+          'webform_submission' => $submission->id()
+        ];
+        $url = new Url('entity.webform.user.submission.edit', $ids);
+        $link = new Link('Editer', $url);
+        $candidat[] = [
+          $submission->getData()['adresse']['given_name'],
+          $submission->getData()['adhesion_status'],
+          $link,
           ];
-        }
-      else{
-        return ['#markup' => $this->t('Page not found.')];
       }
-    }
-    else{
-      return ['#markup' => $this->t('Access denied.')];
-    }
+      return [
+        '#type' => 'table',
+        '#empty' => $this->t('No participants'),
+        '#header' => [$this->t('Participants in the program'),'Statut',' '],
+        '#rows' => $candidat,
+        '#cache' => [
+          'max-age' => 0,
+        ],
+      ];
   }
 }

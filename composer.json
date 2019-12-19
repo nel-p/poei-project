@@ -30,7 +30,7 @@
         "drupal/pathauto": "^1.5",
         "drupal/registration_role": "^1.1@beta",
         "drupal/webform": "^5.5",
-        "drush/drush": "^9.0.0",
+        "drush/drush": "^10.1",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",

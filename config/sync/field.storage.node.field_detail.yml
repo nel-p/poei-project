@@ -1,4 +1,4 @@
-uuid: 80ca4654-a230-4419-b3c4-6a04527f5fbb
+uuid: 7493519d-c1ef-43d2-a4f6-bd2fe3652087
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
 id: node.field_detail
 field_name: field_detail
 entity_type: node
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false
