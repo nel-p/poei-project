@@ -6,11 +6,14 @@ dependencies:
     - field.field.node.hotel.field_adresse
     - field.field.node.hotel.field_description
     - field.field.node.hotel.field_email
+    - field.field.node.hotel.field_photos
     - field.field.node.hotel.field_prix
     - field.field.node.hotel.field_telephone
+    - image.style.thumbnail
     - node.type.hotel
   module:
     - address
+    - image
     - path
     - text
 id: node.hotel.default
@@ -45,6 +48,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
+  field_photos:
+    weight: 127
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   field_prix:
     weight: 124

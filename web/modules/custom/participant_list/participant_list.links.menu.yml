@@ -34,3 +34,8 @@ participant_list.add_hotel:
   route_name: node.add
   menu_name: tools
   route_parameters: { node_type: 'hotel' }
+
+participant_list.create_webform:
+  title: 'Create my webform'
+  route_name: entity.webform.collection
+  menu_name: tools
